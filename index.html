@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carteirinha de Estudante</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="back">
+                <span>Voltar</span>
+            </div>
+            <div class="title">
+                <span>Carteira Estudantil</span>
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="carteirinha">
+                <div class="header">
+                    <h2>CARTEIRINHA DE IDENTIDADE ESTUDANTIL</h2>
+                    <div class="img">
+                        <img src="img-carteirinha.jpeg" alt="img">
+                    </div>
+                </div>
+                <div class="body-carteirinha">
+                    <div class="info">
+                        <p><strong>ALUNO:</strong> <br> JENIFER CARVALHO MARQUES</p>
+                        <p><strong>CURSO:</strong> <br> CURSO SUPERIOR DE TECNOLOGIA EM ANÁLISE E</p>
+                        <p><strong>CAMPUS/PAP:</strong> <br> PAP CARAPICUÍBA - SP</p>
+                        <p><strong>RU:</strong> <span id="ru">295656771</span> </p>
+                        <p><strong>CPF:</strong> 445.274.238-60 </p>
+                    </div>
+                    <div class="validade">
+                        <p><strong>VALIDADE:</strong> 30/06/2028</p>
+                        <p><strong>DATA:</strong> <span id="data"></span> <span id="hora"></span></p>
+                    </div>
+
+                    <div class="img-qr-code">
+                        <img src="./welcome.png" alt="qr-code">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+        </footer>
+    </div>
+
+    <script>
+        function atualizarDataHora() {
+            const agora = new Date();
+            const dataHoraFormatada = agora.toLocaleString('pt-BR', {
+                dateStyle: 'short',
+                timeStyle: 'medium'
+            });
+            document.getElementById('data').innerHTML = dataHoraFormatada.replace(",", " ");
+        }
+
+        atualizarDataHora();
+
+        setInterval(atualizarDataHora, 1000);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+import segno
+
+qrcode = segno.make_qr("RU295656771<<<LEONARDO FERREIRA DA SILVA<<VAL30/06/2028<<<CURSO SUPERIOR DE TECNOLOGIA EM ANÁLISE E DESENVOLVIMENTO DE SISTEMAS")
+qrcode.save('welcome.png', scale=10)

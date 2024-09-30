@@ -70,7 +70,6 @@ header {
 }
 
 .header {
-    height: 2em;
     color: #00315a;
     display: flex;
     flex-direction: row;
@@ -81,7 +80,7 @@ header {
 }
 
 .header h2 {
-    font-size: 0.93rem;
+    font-size: 0.9rem;
     margin: 0;
     font-weight: 700;
 }
